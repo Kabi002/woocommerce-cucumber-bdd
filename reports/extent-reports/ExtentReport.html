@@ -35,7 +35,7 @@
 <a href="#"><span class="badge badge-primary">WooCommerce BDD Test Report</span></a>
 </li>
 <li class="m-r-10">
-<a href="#"><span class="badge badge-primary">Apr 07, 2026 11:01:36</span></a>
+<a href="#"><span class="badge badge-primary">Apr 08, 2026 18:06:08</span></a>
 </li>
 </ul>
 </div>
@@ -45,6 +45,16 @@
 <li class="nav-item dropdown" onclick="toggleView('test-view')">
 <a id="nav-test" class="dropdown-toggle" href="#">
 <span class="ico"><i class="fa fa-list"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView('exception-view')">
+<a id="nav-exception" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-bug"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView('category-view')">
+<a id="nav-category" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-tag"></i></span>
 </a>
 </li>
 <li class="nav-item dropdown" onclick="toggleView('dashboard-view')">
@@ -67,8 +77,15 @@
 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-exclamation-circle"></i></a>
 <ul id="status-toggle" class="dropdown-menu dropdown-md p-v-0">
 <a class="dropdown-item" status="pass" href="#"><span>Pass</span><span class="status success"></span></a>
+<a class="dropdown-item" status="fail" href="#"><span>Fail</span><span class="status danger"></span></a>
 <div class="dropdown-divider"></div>
 <a status="clear" class="dropdown-item" href="#"><span>Clear</span><span class="pull-right"><i class="fa fa-close"></i></span></a>
+</ul>
+</li>
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-tag"></i></a>
+<ul id="tag-toggle" class="dropdown-menu dropdown-md p-v-0">
+<a class="dropdown-item" href="#">@ignore</a><a class="dropdown-item" href="#">@dashboard</a><a class="dropdown-item" href="#">@register</a><a class="dropdown-item" href="#">@login</a>
 </ul>
 </li>
 </ul>
@@ -81,7 +98,7 @@
           <div class="test-detail">
             <p class="name">WooCommerce Login Functionality</p>
             <p class="text-sm">
-              <span>11:01:37 AM</span> / <span>00:01:30:723</span>
+              <span>6:06:08 PM</span> / <span>00:01:27:923</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -90,9 +107,9 @@
 <div class="p-v-10">
 <div class="info">
 <h5 class="test-status text-pass">WooCommerce Login Functionality</h5>
-<span class='badge badge-success'>04.07.2026 11:01:37 AM</span>
-<span class='badge badge-danger'>04.07.2026 11:03:08 AM</span>
-<span class='badge badge-default'>00:01:30:723</span>
+<span class='badge badge-success'>04.08.2026 6:06:08 PM</span>
+<span class='badge badge-danger'>04.08.2026 6:07:36 PM</span>
+<span class='badge badge-default'>00:01:27:923</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
 <span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
 <span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
@@ -202,6 +219,385 @@
 </div>
           </div>
         </li>
+        <li class="test-item"  status="fail" test-id="24"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">WooCommerce User Registration</p>
+            <p class="text-sm">
+              <span>6:07:36 PM</span> / <span>00:02:02:495</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">WooCommerce User Registration</h5>
+<span class='badge badge-success'>04.08.2026 6:07:36 PM</span>
+<span class='badge badge-danger'>04.08.2026 6:09:39 PM</span>
+<span class='badge badge-default'>00:02:02:495</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=24</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5"></div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="25"><span class="badge log fail-bg mr-2">Fail</span>Successful user registration with valid details</div>
+          <div class="status-avatar float-right mr-4">
+            <i class="fa fa-paperclip"></i>
+          </div>
+      </div>
+    </div>
+        <div class="">
+          <div class="card-body">
+              <div class="step pass-bg" title="stepdefinitions.RegisterSteps.i_navigate_to_the_registration_page()">
+                <span>Given I navigate to the registration page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.RegisterSteps.i_enter_first_name(java.lang.String)">
+                <span>When I enter first name "Kabilan"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.RegisterSteps.i_enter_last_name(java.lang.String)">
+                <span>And I enter last name "Test"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.RegisterSteps.i_enter_email_address(java.lang.String)">
+                <span>And I enter email address "testuser12345@gmail.com"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.RegisterSteps.i_click_on_the_register_button()">
+                <span>And I click on the register button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.RegisterSteps.i_should_be_registered_successfully()">
+                <span>Then I should be registered successfully</span>
+      <div>
+      </div>
+              </div>
+              <div class="step fail-bg" title="stepdefinitions.RegisterSteps.i_should_see_the_dashboard()">
+                <span>And I should see the dashboard</span>
+      <div>
+        <textarea disabled class="code-block">java.lang.AssertionError: Dashboard is not visible! expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertTrue(Assert.java:57)
+	at stepdefinitions.RegisterSteps.i_should_see_the_dashboard(RegisterSteps.java:56)
+	at ✽.I should see the dashboard(file:///C:/Users/Lenovo/eclipse-workspace/woocommerce-cucumber-bdd/src/test/resources/features/Register.feature:14)
+</textarea>
+      
+      </div>
+              </div>
+              <div class="step pass-bg" title="AFTER">
+                <span>hooks.Hooks.tearDown(io.cucumber.java.Scenario)</span>
+      <div>Successful user registration with valid details
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../screenshots/embedded1.png' src="../screenshots/embedded1.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="35"><span class="badge log pass-bg mr-2">Pass</span>Registration with empty first name shows HTML5 validation</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="stepdefinitions.RegisterSteps.i_navigate_to_the_registration_page()">
+                <span>Given I navigate to the registration page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.RegisterSteps.i_enter_last_name(java.lang.String)">
+                <span>When I enter last name "Test"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.RegisterSteps.i_enter_email_address(java.lang.String)">
+                <span>And I enter email address "test@gmail.com"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.RegisterSteps.i_click_on_the_register_button()">
+                <span>And I click on the register button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.RegisterSteps.i_should_see_registration_html5_validation_message()">
+                <span>Then I should see registration HTML5 validation message</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="43"><span class="badge log pass-bg mr-2">Pass</span>Registration with invalid email format</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="stepdefinitions.RegisterSteps.i_navigate_to_the_registration_page()">
+                <span>Given I navigate to the registration page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.RegisterSteps.i_enter_first_name(java.lang.String)">
+                <span>When I enter first name "Kabilan"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.RegisterSteps.i_enter_last_name(java.lang.String)">
+                <span>And I enter last name "Test"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.RegisterSteps.i_enter_email_address(java.lang.String)">
+                <span>And I enter email address "invalidemail"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.RegisterSteps.i_click_on_the_register_button()">
+                <span>And I click on the register button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.RegisterSteps.i_should_see_email_format_validation_message()">
+                <span>Then I should see email format validation message</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="52"><span class="badge log pass-bg mr-2">Pass</span>Registration with duplicate email address</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="stepdefinitions.RegisterSteps.i_navigate_to_the_registration_page()">
+                <span>Given I navigate to the registration page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.RegisterSteps.i_enter_first_name(java.lang.String)">
+                <span>When I enter first name "Kabilan"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.RegisterSteps.i_enter_last_name(java.lang.String)">
+                <span>And I enter last name "Test"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.RegisterSteps.i_enter_email_address(java.lang.String)">
+                <span>And I enter email address "test_email@12taste.com"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.RegisterSteps.i_click_on_the_register_button()">
+                <span>And I click on the register button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.RegisterSteps.i_should_see_duplicate_email_error_message()">
+                <span>Then I should see duplicate email error message</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="61"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">WooCommerce Dashboard Functionality</p>
+            <p class="text-sm">
+              <span>6:09:39 PM</span> / <span>00:04:42:938</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">WooCommerce Dashboard Functionality</h5>
+<span class='badge badge-success'>04.08.2026 6:09:39 PM</span>
+<span class='badge badge-danger'>04.08.2026 6:14:22 PM</span>
+<span class='badge badge-default'>00:04:42:938</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=61</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5"></div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="62"><span class="badge log pass-bg mr-2">Pass</span>Verify all sidebar links are visible on dashboard</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="stepdefinitions.LoginSteps.i_navigate_to_the_login_page()">
+                <span>Given I navigate to the login page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.LoginSteps.i_enter_username(java.lang.String)">
+                <span>When I enter username "test_email@12taste.com"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.LoginSteps.i_enter_password(java.lang.String)">
+                <span>And I enter password "test_email@12taste.com"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.LoginSteps.i_click_on_the_login_button()">
+                <span>And I click on the login button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.LoginSteps.i_should_be_logged_in_successfully()">
+                <span>Then I should be logged in successfully</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.DashboardSteps.i_should_see_all_sidebar_links_on_the_dashboard()">
+                <span>Then I should see all sidebar links on the dashboard</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="71"><span class="badge log pass-bg mr-2">Pass</span>Verify dashboard order counts are displayed</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="stepdefinitions.LoginSteps.i_navigate_to_the_login_page()">
+                <span>Given I navigate to the login page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.LoginSteps.i_enter_username(java.lang.String)">
+                <span>When I enter username "test_email@12taste.com"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.LoginSteps.i_enter_password(java.lang.String)">
+                <span>And I enter password "test_email@12taste.com"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.LoginSteps.i_click_on_the_login_button()">
+                <span>And I click on the login button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.LoginSteps.i_should_be_logged_in_successfully()">
+                <span>Then I should be logged in successfully</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.DashboardSteps.i_should_see_count_on_the_dashboard(java.lang.String)">
+                <span>Then I should see "Orders and quotes" count on the dashboard</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.DashboardSteps.i_should_see_count_on_the_dashboard(java.lang.String)">
+                <span>And I should see "Processing orders" count on the dashboard</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.DashboardSteps.i_should_see_count_on_the_dashboard(java.lang.String)">
+                <span>And I should see "Awaiting payments" count on the dashboard</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="82"><span class="badge log pass-bg mr-2">Pass</span>Navigate and verify all sidebar links one by one</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="stepdefinitions.LoginSteps.i_navigate_to_the_login_page()">
+                <span>Given I navigate to the login page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.LoginSteps.i_enter_username(java.lang.String)">
+                <span>When I enter username "test_email@12taste.com"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.LoginSteps.i_enter_password(java.lang.String)">
+                <span>And I enter password "test_email@12taste.com"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.LoginSteps.i_click_on_the_login_button()">
+                <span>And I click on the login button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.LoginSteps.i_should_be_logged_in_successfully()">
+                <span>Then I should be logged in successfully</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.DashboardSteps.i_click_and_verify_all_sidebar_links()">
+                <span>When I click and verify all sidebar links</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
       </ul>
     </div>
   </div>
@@ -211,30 +607,314 @@
 </div>
 <div class="test-content-detail"><div class="detail-body"></div></div>
 </div></div>
-<div class="container-fluid p-4 view dashboard-view">
+<div class="test-wrapper row view exception-view attributes-view">
+<div class="test-list">
+<div class="test-list-tools">
+<ul class="tools pull-left"><li><a href=""><span class="font-size-14">Exception</span></a></li></ul>
+<ul class="tools text-right"><li><a href="#"><span class="badge badge-primary">1</span></a></li></ul>
+</div>
+<div class="test-list-wrapper scrollable">
+<ul class="test-list-item">
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-danger'>1</span>
+</span>
+<p class="name">java.lang.AssertionError</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>java.lang.AssertionError</h4>
+<span status="fail" class='badge log badge-danger'>1 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>18:08:07 PM</td>
+<td>
+<a href="#" class="linked" test-id='24' id='33'>And I should see the dashboard</a>
+<div class="">
+<span class="badge badge-default">WooCommerce User Registration.Successful user registration with valid details.And I should see the dashboard</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="test-content scrollable">
+<div class="test-content-detail">
+<div class="detail-body"></div>
+</div>
+</div>
+</div><div class="test-wrapper row view category-view attributes-view">
+<div class="test-list">
+<div class="test-list-tools">
+<ul class="tools pull-left"><li><a href=""><span class="font-size-14">Category</span></a></li></ul>
+<ul class="tools text-right"><li><a href="#"><span class="badge badge-primary">4</span></a></li></ul>
+</div>
+<div class="test-list-wrapper scrollable">
+<ul class="test-list-item">
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-danger'>1</span>
+</span>
+<p class="name">@ignore</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@ignore</h4>
+<span status="fail" class='badge log badge-danger'>1 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>18:07:36 PM</td>
+<td>
+<a href="#" class="linked" test-id='24' id='25'>Successful user registration with valid details</a>
+<div class="">
+<span class="badge badge-default">WooCommerce User Registration.Successful user registration with valid details</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>3</span>
+</span>
+<p class="name">@dashboard</p>
+<p class="duration text-sm">3 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@dashboard</h4>
+<span status="pass" class='badge log pass-bg'>3 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>18:09:39 PM</td>
+<td>
+<a href="#" class="linked" test-id='61' id='62'>Verify all sidebar links are visible on dashboard</a>
+<div class="">
+<span class="badge badge-default">WooCommerce Dashboard Functionality.Verify all sidebar links are visible on dashboard</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>18:10:11 PM</td>
+<td>
+<a href="#" class="linked" test-id='61' id='71'>Verify dashboard order counts are displayed</a>
+<div class="">
+<span class="badge badge-default">WooCommerce Dashboard Functionality.Verify dashboard order counts are displayed</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>18:10:44 PM</td>
+<td>
+<a href="#" class="linked" test-id='61' id='82'>Navigate and verify all sidebar links one by one</a>
+<div class="">
+<span class="badge badge-default">WooCommerce Dashboard Functionality.Navigate and verify all sidebar links one by one</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>3</span>
+<span class='badge log badge-danger'>1</span>
+</span>
+<p class="name">@register</p>
+<p class="duration text-sm">4 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@register</h4>
+<span status="pass" class='badge log pass-bg'>3 passed</span>
+<span status="fail" class='badge log badge-danger'>1 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>18:07:36 PM</td>
+<td>
+<a href="#" class="linked" test-id='24' id='25'>Successful user registration with valid details</a>
+<div class="">
+<span class="badge badge-default">WooCommerce User Registration.Successful user registration with valid details</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>18:08:18 PM</td>
+<td>
+<a href="#" class="linked" test-id='24' id='35'>Registration with empty first name shows HTML5 validation</a>
+<div class="">
+<span class="badge badge-default">WooCommerce User Registration.Registration with empty first name shows HTML5 validation</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>18:08:44 PM</td>
+<td>
+<a href="#" class="linked" test-id='24' id='43'>Registration with invalid email format</a>
+<div class="">
+<span class="badge badge-default">WooCommerce User Registration.Registration with invalid email format</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>18:09:10 PM</td>
+<td>
+<a href="#" class="linked" test-id='24' id='52'>Registration with duplicate email address</a>
+<div class="">
+<span class="badge badge-default">WooCommerce User Registration.Registration with duplicate email address</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>3</span>
+</span>
+<p class="name">@login</p>
+<p class="duration text-sm">3 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@login</h4>
+<span status="pass" class='badge log pass-bg'>3 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>18:06:08 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='2'>Successful login with valid credentials</a>
+<div class="">
+<span class="badge badge-default">WooCommerce Login Functionality.Successful login with valid credentials</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>18:06:40 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='10'>Login with invalid credentials</a>
+<div class="">
+<span class="badge badge-default">WooCommerce Login Functionality.Login with invalid credentials</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>18:07:10 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='18'>Login with empty credentials shows HTML5 validation</a>
+<div class="">
+<span class="badge badge-default">WooCommerce Login Functionality.Login with empty credentials shows HTML5 validation</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="test-content scrollable">
+<div class="test-content-detail">
+<div class="detail-body"></div>
+</div>
+</div>
+</div><div class="container-fluid p-4 view dashboard-view">
 <div class="row">
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Started</p>
-<h3>Apr 07, 2026 11:01:36</h3>
+<h3>Apr 08, 2026 18:06:08</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Ended</p>
-<h3>Apr 07, 2026 11:03:08</h3>
+<h3>Apr 08, 2026 18:14:22</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0 text-pass">Features Passed</p>
-<h3>1</h3>
+<h3>2</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0 text-fail">Features Failed</p>
-<h3>0</h3>
+<h3>1</h3>
 </div></div>
 </div>
 </div>
@@ -250,12 +930,12 @@
 </div>
 </div>
 <div class="card-footer">
-<div><small data-tooltip='100%'>
-<b>1</b> features passed
+<div><small data-tooltip='66%'>
+<b>2</b> features passed
 </small>
 </div>
 <div>
-<small data-tooltip='0%'><b>0</b> features failed,
+<small data-tooltip='33%'><b>1</b> features failed,
 <b>0</b> skipped, <b data-tooltip='0%'>0</b> others
 </small>
 </div>
@@ -273,9 +953,9 @@
 </div>
 </div>
 <div class="card-footer">
-<div><small data-tooltip='100%'><b>3</b> scenarios passed</small></div>
+<div><small data-tooltip='90%'><b>9</b> scenarios passed</small></div>
 <div>
-<small data-tooltip='0%'><b>0</b> scenarios failed,
+<small data-tooltip='10%'><b>1</b> scenarios failed,
 <b>0</b> skipped, <b data-tooltip='%'>0</b> others
 </small>
 </div>
@@ -293,9 +973,9 @@
 </div>
 </div>
 <div class="card-footer">
-<div><small data-tooltip='100%'><b>13</b> steps passed</small></div>
+<div><small data-tooltip='98%'><b>57</b> steps passed</small></div>
 <div>
-<small data-tooltip='0%'><b>0</b> steps failed,
+<small data-tooltip='1%'><b>1</b> steps failed,
 <b>0</b> skipped, <b data-tooltip='%'>0</b> others
 </small>
 </div>
@@ -312,10 +992,51 @@
 </div></div>
 <script>
 var timeline = {
-"WooCommerce Login Functionality":90.723
+"WooCommerce Login Functionality":87.923,"WooCommerce User Registration":122.495,"WooCommerce Dashboard Functionality":282.938
 };
 </script>
 <div class="row">
+<div class="col-lg-6 col-md-12 category-container">
+<div class="card">
+<div class="card-header"><p>Tags</p></div>
+<div class="card-body pb-0 pt-0"><table class="table table-sm table-bordered">
+<thead><tr class="bg-gray"><th>Name</th><th>Passed</th><th>Failed</th><th>Skipped</th><th>Others</th><th>Passed %</th></tr></thead><tbody>
+<tr>
+<td>@ignore</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0%</td>
+</tr>
+<tr>
+<td>@dashboard</td>
+<td>3</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>@register</td>
+<td>3</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>75%</td>
+</tr>
+<tr>
+<td>@login</td>
+<td>3</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
 <div class="col-lg-6 col-md-12 sysenv-container">
 <div class="card">
 <div class="card-header"><p>System/Environment</p></div>
@@ -347,19 +1068,19 @@ var timeline = {
 <script>
 var statusGroup = {
 parentCount: 5,
-passParent: 1,
-failParent: 0,
+passParent: 2,
+failParent: 1,
 warningParent: 0,
 skipParent: 0,
 childCount: 5,
-passChild: 3,
-failChild: 0,
+passChild: 9,
+failChild: 1,
 warningChild: 0,
 skipChild: 0,
 infoChild: 0,
 grandChildCount: 5,
-passGrandChild: 13,
-failGrandChild: 0,
+passGrandChild: 57,
+failGrandChild: 1,
 warningGrandChild: 0,
 skipGrandChild: 0,
 infoGrandChild: 0,

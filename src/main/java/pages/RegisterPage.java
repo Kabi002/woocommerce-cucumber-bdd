@@ -15,8 +15,8 @@ public class RegisterPage {
     private WebDriverWait wait;
     
     // Locators - Update based on your WooCommerce registration form
-    private By firstNameField = By.id("reg_billing_first_name");
-    private By lastNameField = By.id("reg_billing_last_name");
+    private By firstNameField = By.id("first_name");
+    private By lastNameField = By.id("last_name");
     private By emailField = By.id("reg_email");
     private By registerButton = By.name("register");
     private By errorMessage = By.xpath("//ul[@class='woocommerce-error']//li");

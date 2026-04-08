@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="WooCommerce Test Suite" verbose="1" preserve-order="true">
+
+    <test name="1 - Login Tests">
+        <classes>
+            <class name="runners.LoginTestRunner"/>
+        </classes>
+    </test>
+
+    <test name="2 - Register Tests">
+        <classes>
+            <class name="runners.RegisterTestRunner"/>
+        </classes>
+    </test>
+
+    <test name="3 - Dashboard Tests">
+        <classes>
+            <class name="runners.DashboardTestRunner"/>
+        </classes>
+    </test>
+
+</suite>

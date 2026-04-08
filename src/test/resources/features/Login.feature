@@ -1,3 +1,4 @@
+@login
 Feature: WooCommerce Login Functionality
 
   Background:

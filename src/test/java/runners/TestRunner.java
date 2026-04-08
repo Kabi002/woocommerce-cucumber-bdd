@@ -6,7 +6,7 @@ import io.cucumber.testng.CucumberOptions;
 
 @CucumberOptions(
     features = "src/test/resources/features",           // Path to feature files
-    glue = {"stepdefinitions", "hooks"},                // Path to step definitions and hooks
+    glue = {"stepdefinitions", "hooks"},    // Path to step definitions and hooks
     plugin = {
         "pretty",                                        // Console output
         "html:reports/cucumber-reports/cucumber.html",   // HTML report
@@ -15,7 +15,7 @@ import io.cucumber.testng.CucumberOptions;
     },
     monochrome = true,                                   // Readable console output
     dryRun = false,                                      // Set true to check mapping without execution
-    tags = ""                                            // Run specific scenarios using tags
+    tags = "@login or @register or @dashboard"                                            // Run specific scenarios using tags
 )
 public class TestRunner extends AbstractTestNGCucumberTests {
     

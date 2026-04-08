@@ -1,27 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+<testng-results ignored="0" total="10" passed="9" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-04-07T11:01:36 IST" name="Default suite" finished-at="2026-04-07T11:03:08 IST" duration-ms="91854">
+  <suite started-at="2026-04-08T18:06:07 IST" name="WooCommerce Test Suite" finished-at="2026-04-08T18:14:22 IST" duration-ms="494572">
     <groups>
       <group name="cucumber">
-        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.TestRunner@157853da]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.LoginTestRunner@157853da]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.RegisterTestRunner@34f7cfd9]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.DashboardTestRunner@3e6ef8ad]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test started-at="2026-04-07T11:01:36 IST" name="Default test" finished-at="2026-04-07T11:03:08 IST" duration-ms="91854">
-      <class name="runners.TestRunner">
-        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:runners.TestRunner@157853da]" started-at="2026-04-07T11:01:36 IST" name="setUpClass" finished-at="2026-04-07T11:01:37 IST" duration-ms="702" status="PASS">
+    <test started-at="2026-04-08T18:06:07 IST" name="1 - Login Tests" finished-at="2026-04-08T18:07:36 IST" duration-ms="88950">
+      <class name="runners.LoginTestRunner">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:runners.LoginTestRunner@157853da]" started-at="2026-04-08T18:06:07 IST" name="setUpClass" finished-at="2026-04-08T18:06:08 IST" duration-ms="633" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@2997ddfc]]>
+                <![CDATA[org.testng.TestRunner@f4aec23]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.TestRunner@157853da]" started-at="2026-04-07T11:01:37 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-04-07T11:02:11 IST" duration-ms="34155" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.LoginTestRunner@157853da]" started-at="2026-04-08T18:06:08 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-04-08T18:06:40 IST" duration-ms="32114" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -37,7 +39,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.TestRunner@157853da]" started-at="2026-04-07T11:02:11 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-04-07T11:02:41 IST" duration-ms="30092" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.LoginTestRunner@157853da]" started-at="2026-04-08T18:06:40 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-04-08T18:07:10 IST" duration-ms="29816" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -53,7 +55,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.TestRunner@157853da]" started-at="2026-04-07T11:02:41 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-04-07T11:03:08 IST" duration-ms="26590" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.LoginTestRunner@157853da]" started-at="2026-04-08T18:07:10 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-04-08T18:07:36 IST" duration-ms="26077" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -69,11 +71,175 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:runners.TestRunner@157853da]" started-at="2026-04-07T11:03:08 IST" name="tearDownClass" finished-at="2026-04-07T11:03:08 IST" duration-ms="275" status="PASS">
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:runners.LoginTestRunner@157853da]" started-at="2026-04-08T18:07:36 IST" name="tearDownClass" finished-at="2026-04-08T18:07:36 IST" duration-ms="268" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->
-      </class> <!-- runners.TestRunner -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+      </class> <!-- runners.LoginTestRunner -->
+    </test> <!-- 1 - Login Tests -->
+    <test started-at="2026-04-08T18:07:36 IST" name="2 - Register Tests" finished-at="2026-04-08T18:09:39 IST" duration-ms="122606">
+      <class name="runners.RegisterTestRunner">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:runners.RegisterTestRunner@34f7cfd9]" started-at="2026-04-08T18:07:36 IST" name="setUpClass" finished-at="2026-04-08T18:07:36 IST" duration-ms="18" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@713c8cbb]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpClass -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.RegisterTestRunner@34f7cfd9]" started-at="2026-04-08T18:07:36 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-04-08T18:08:18 IST" duration-ms="41475" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Successful user registration with valid details"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["WooCommerce User Registration"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Dashboard is not visible! expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Dashboard is not visible! expected [true] but found [false]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1578)
+at org.testng.Assert.assertTrue(Assert.java:57)
+at stepdefinitions.RegisterSteps.i_should_see_the_dashboard(RegisterSteps.java:56)
+at ✽.I should see the dashboard(file:///C:/Users/Lenovo/eclipse-workspace/woocommerce-cucumber-bdd/src/test/resources/features/Register.feature:14)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.RegisterTestRunner@34f7cfd9]" started-at="2026-04-08T18:08:18 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-04-08T18:08:44 IST" duration-ms="25795" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Registration with empty first name shows HTML5 validation"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["WooCommerce User Registration"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.RegisterTestRunner@34f7cfd9]" started-at="2026-04-08T18:08:44 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-04-08T18:09:10 IST" duration-ms="26470" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Registration with invalid email format"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["WooCommerce User Registration"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.RegisterTestRunner@34f7cfd9]" started-at="2026-04-08T18:09:10 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-04-08T18:09:39 IST" duration-ms="28761" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Registration with duplicate email address"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["WooCommerce User Registration"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:runners.RegisterTestRunner@34f7cfd9]" started-at="2026-04-08T18:09:39 IST" name="tearDownClass" finished-at="2026-04-08T18:09:39 IST" duration-ms="80" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownClass -->
+      </class> <!-- runners.RegisterTestRunner -->
+    </test> <!-- 2 - Register Tests -->
+    <test started-at="2026-04-08T18:09:39 IST" name="3 - Dashboard Tests" finished-at="2026-04-08T18:14:22 IST" duration-ms="282991">
+      <class name="runners.DashboardTestRunner">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:runners.DashboardTestRunner@3e6ef8ad]" started-at="2026-04-08T18:09:39 IST" name="setUpClass" finished-at="2026-04-08T18:09:39 IST" duration-ms="9" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@7680beac]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpClass -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.DashboardTestRunner@3e6ef8ad]" started-at="2026-04-08T18:09:39 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-04-08T18:10:11 IST" duration-ms="31699" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify all sidebar links are visible on dashboard"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["WooCommerce Dashboard Functionality"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.DashboardTestRunner@3e6ef8ad]" started-at="2026-04-08T18:10:11 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-04-08T18:10:44 IST" duration-ms="33192" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify dashboard order counts are displayed"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["WooCommerce Dashboard Functionality"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.DashboardTestRunner@3e6ef8ad]" started-at="2026-04-08T18:10:44 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-04-08T18:14:22 IST" duration-ms="218049" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Navigate and verify all sidebar links one by one"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["WooCommerce Dashboard Functionality"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:runners.DashboardTestRunner@3e6ef8ad]" started-at="2026-04-08T18:14:22 IST" name="tearDownClass" finished-at="2026-04-08T18:14:22 IST" duration-ms="37" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownClass -->
+      </class> <!-- runners.DashboardTestRunner -->
+    </test> <!-- 3 - Dashboard Tests -->
+  </suite> <!-- WooCommerce Test Suite -->
 </testng-results>

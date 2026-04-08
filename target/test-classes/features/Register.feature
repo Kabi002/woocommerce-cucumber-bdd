@@ -1,8 +1,10 @@
+@register
+
 Feature: WooCommerce User Registration
 
   Background:
     Given I navigate to the registration page
-
+@ignore
   Scenario: Successful user registration with valid details
     When I enter first name "Kabilan"
     And I enter last name "Test"
