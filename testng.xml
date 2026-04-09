@@ -26,4 +26,10 @@
     </classes>
 </test>
 
+ <test name="5 - Addresses Tests">
+    <classes>
+        <class name="runners.AddressesTestRunner"/>
+    </classes>
+</test>
+
 </suite>
