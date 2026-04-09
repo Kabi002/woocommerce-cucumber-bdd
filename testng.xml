@@ -19,5 +19,11 @@
             <class name="runners.DashboardTestRunner"/>
         </classes>
     </test>
+    
+    <test name="4 - Account Details Tests">
+    <classes>
+        <class name="runners.AccountDetailsTestRunner"/>
+    </classes>
+</test>
 
 </suite>
