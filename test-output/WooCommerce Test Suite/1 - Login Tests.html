@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>1 - Login Tests</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>3/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>1/2/0</td>
 </tr><tr>
-<td>Started on:</td><td>Wed Apr 08 18:06:07 IST 2026</td>
+<td>Started on:</td><td>Thu Apr 09 21:55:09 IST 2026</td>
 </tr>
-<tr><td>Total time:</td><td>88 seconds (88950 ms)</td>
+<tr><td>Total time:</td><td>97 seconds (97270 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,6 +67,44 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='runners.LoginTestRunner.runScenario()'><b>runScenario</b><br>Test class: runners.LoginTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Successful login with valid credentials", "WooCommerce Login Functionality"</td>
+<td><div><pre>java.lang.AssertionError: Login was not successful! expected [true] but found [false]
+	at stepdefinitions.LoginSteps.i_should_be_logged_in_successfully(LoginSteps.java:46)
+	at ?.I should be logged in successfully(file:///C:/Users/Admin/git/woocommerce-cucumber-bdd/src/test/resources/features/Login.feature:11)
+... Removed 3 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace508864177", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace508864177'><pre>java.lang.AssertionError: Login was not successful! expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertTrue(Assert.java:57)
+	at stepdefinitions.LoginSteps.i_should_be_logged_in_successfully(LoginSteps.java:46)
+	at ?.I should be logged in successfully(file:///C:/Users/Admin/git/woocommerce-cucumber-bdd/src/test/resources/features/Login.feature:11)
+</pre></div></td>
+<td>47</td>
+<td>runners.LoginTestRunner@1e66f1f5</td></tr>
+<tr>
+<td title='runners.LoginTestRunner.runScenario()'><b>runScenario</b><br>Test class: runners.LoginTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Login with empty credentials shows HTML5 validation", "WooCommerce Login Functionality"</td>
+<td><div><pre>java.lang.RuntimeException: Unable to click login button
+	at pages.LoginPage.clickLoginButton(LoginPage.java:58)
+	at stepdefinitions.LoginSteps.i_click_on_the_login_button(LoginSteps.java:41)
+	at ?.I click on the login button(file:///C:/Users/Admin/git/woocommerce-cucumber-bdd/src/test/resources/features/Login.feature:20)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1984954272", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1984954272'><pre>java.lang.RuntimeException: Unable to click login button
+	at pages.LoginPage.clickLoginButton(LoginPage.java:58)
+	at stepdefinitions.LoginSteps.i_click_on_the_login_button(LoginSteps.java:41)
+	at ?.I click on the login button(file:///C:/Users/Admin/git/woocommerce-cucumber-bdd/src/test/resources/features/Login.feature:20)
+</pre></div></td>
+<td>13</td>
+<td>runners.LoginTestRunner@1e66f1f5</td></tr>
+</table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
@@ -76,20 +114,10 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='runners.LoginTestRunner.runScenario()'><b>runScenario</b><br>Test class: runners.LoginTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Login with empty credentials shows HTML5 validation", "WooCommerce Login Functionality"</td>
-<td></td>
-<td>26</td>
-<td>runners.LoginTestRunner@157853da</td></tr>
-<tr>
-<td title='runners.LoginTestRunner.runScenario()'><b>runScenario</b><br>Test class: runners.LoginTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Successful login with valid credentials", "WooCommerce Login Functionality"</td>
-<td></td>
-<td>32</td>
-<td>runners.LoginTestRunner@157853da</td></tr>
-<tr>
 <td title='runners.LoginTestRunner.runScenario()'><b>runScenario</b><br>Test class: runners.LoginTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Login with invalid credentials", "WooCommerce Login Functionality"</td>
 <td></td>
-<td>29</td>
-<td>runners.LoginTestRunner@157853da</td></tr>
+<td>33</td>
+<td>runners.LoginTestRunner@1e66f1f5</td></tr>
 </table><p>
 </body>
 </html>
