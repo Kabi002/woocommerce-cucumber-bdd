@@ -32,5 +32,11 @@
     </classes>
 </test>
 
+<test name="6 - Product Search Tests">
+    <classes>
+        <class name="runners.ProductSearchTestRunner"/>
+    </classes>
+</test>
+
 
 </suite>
