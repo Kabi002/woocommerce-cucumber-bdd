@@ -1,193 +1,143 @@
-<<<<<<< HEAD
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
+<testng-results ignored="0" total="7" passed="7" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-04-10T12:38:58 IST" name="Default suite" finished-at="2026-04-10T12:41:49 IST" duration-ms="170399">
+  <suite started-at="2026-04-13T10:14:44 IST" name="Default suite" finished-at="2026-04-13T10:22:22 IST" duration-ms="457404">
     <groups>
       <group name="cucumber">
-        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.ProductSearchTestRunner@157853da]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.CartTestRunner@157853da]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test started-at="2026-04-10T12:38:58 IST" name="Default test" finished-at="2026-04-10T12:41:49 IST" duration-ms="170399">
-      <class name="runners.ProductSearchTestRunner">
-        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:runners.ProductSearchTestRunner@157853da]" started-at="2026-04-10T12:38:58 IST" name="setUpClass" finished-at="2026-04-10T12:38:59 IST" duration-ms="753" status="PASS">
+    <test started-at="2026-04-13T10:14:44 IST" name="Default test" finished-at="2026-04-13T10:22:22 IST" duration-ms="457404">
+      <class name="runners.CartTestRunner">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:runners.CartTestRunner@157853da]" started-at="2026-04-13T10:14:44 IST" name="setUpClass" finished-at="2026-04-13T10:14:45 IST" duration-ms="776" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@674aa626]]>
+                <![CDATA[org.testng.TestRunner@581cb879]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.ProductSearchTestRunner@157853da]" started-at="2026-04-10T12:38:59 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-04-10T12:39:37 IST" duration-ms="38150" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.CartTestRunner@157853da]" started-at="2026-04-13T10:14:45 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-04-13T10:15:42 IST" duration-ms="56413" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA["Search for a product and verify results appear"]]>
+                <![CDATA["Verify product is in cart"]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA["WooCommerce Product Search and Add to Cart"]]>
+                <![CDATA["WooCommerce Cart Functionality"]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.ProductSearchTestRunner@157853da]" started-at="2026-04-10T12:39:37 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-04-10T12:40:33 IST" duration-ms="55933" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.CartTestRunner@157853da]" started-at="2026-04-13T10:15:42 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-04-13T10:16:37 IST" duration-ms="55328" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA["Search with invalid keyword shows no results"]]>
+                <![CDATA["Verify cart total is displayed"]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA["WooCommerce Product Search and Add to Cart"]]>
+                <![CDATA["WooCommerce Cart Functionality"]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.ProductSearchTestRunner@157853da]" started-at="2026-04-10T12:40:33 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-04-10T12:41:11 IST" duration-ms="38134" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.CartTestRunner@157853da]" started-at="2026-04-13T10:16:37 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-04-13T10:17:49 IST" duration-ms="72234" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA["Click on a product and verify product page loads"]]>
+                <![CDATA["Increase product quantity in cart"]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA["WooCommerce Product Search and Add to Cart"]]>
+                <![CDATA["WooCommerce Cart Functionality"]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.ProductSearchTestRunner@157853da]" started-at="2026-04-10T12:41:11 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-04-10T12:41:48 IST" duration-ms="37109" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.CartTestRunner@157853da]" started-at="2026-04-13T10:17:49 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-04-13T10:19:02 IST" duration-ms="72964" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA["Add product to cart successfully"]]>
+                <![CDATA["Decrease product quantity in cart"]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA["WooCommerce Product Search and Add to Cart"]]>
+                <![CDATA["WooCommerce Cart Functionality"]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:runners.ProductSearchTestRunner@157853da]" started-at="2026-04-10T12:41:48 IST" name="tearDownClass" finished-at="2026-04-10T12:41:49 IST" duration-ms="278" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.CartTestRunner@157853da]" started-at="2026-04-13T10:19:02 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-04-13T10:19:57 IST" duration-ms="55072" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify checkout button is visible"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["WooCommerce Cart Functionality"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.CartTestRunner@157853da]" started-at="2026-04-13T10:19:57 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-04-13T10:21:10 IST" duration-ms="72365" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Remove product from cart"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["WooCommerce Cart Functionality"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.CartTestRunner@157853da]" started-at="2026-04-13T10:21:10 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-04-13T10:22:22 IST" duration-ms="71899" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Clear purchase list"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["WooCommerce Cart Functionality"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:runners.CartTestRunner@157853da]" started-at="2026-04-13T10:22:22 IST" name="tearDownClass" finished-at="2026-04-13T10:22:22 IST" duration-ms="312" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->
-      </class> <!-- runners.ProductSearchTestRunner -->
+      </class> <!-- runners.CartTestRunner -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
-=======
-<?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
-  <reporter-output>
-  </reporter-output>
-  <suite started-at="2026-04-10T11:34:58 IST" name="Default suite" finished-at="2026-04-10T11:38:01 IST" duration-ms="183298">
-    <groups>
-      <group name="cucumber">
-        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.ProductSearchTestRunner@157853da]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
-      </group> <!-- cucumber -->
-    </groups>
-    <test started-at="2026-04-10T11:34:58 IST" name="Default test" finished-at="2026-04-10T11:38:01 IST" duration-ms="183298">
-      <class name="runners.ProductSearchTestRunner">
-        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:runners.ProductSearchTestRunner@157853da]" started-at="2026-04-10T11:34:58 IST" name="setUpClass" finished-at="2026-04-10T11:34:58 IST" duration-ms="575" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[org.testng.TestRunner@7996d0d4]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUpClass -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.ProductSearchTestRunner@157853da]" started-at="2026-04-10T11:34:58 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-04-10T11:35:36 IST" duration-ms="37824" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Search for a product and verify results appear"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["WooCommerce Product Search and Add to Cart"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.ProductSearchTestRunner@157853da]" started-at="2026-04-10T11:35:36 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-04-10T11:36:36 IST" duration-ms="59940" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Search with invalid keyword shows no results"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["WooCommerce Product Search and Add to Cart"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.ProductSearchTestRunner@157853da]" started-at="2026-04-10T11:36:36 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-04-10T11:37:20 IST" duration-ms="43850" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Click on a product and verify product page loads"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["WooCommerce Product Search and Add to Cart"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.ProductSearchTestRunner@157853da]" started-at="2026-04-10T11:37:20 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-04-10T11:38:01 IST" duration-ms="40817" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Add product to cart successfully"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["WooCommerce Product Search and Add to Cart"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:runners.ProductSearchTestRunner@157853da]" started-at="2026-04-10T11:38:01 IST" name="tearDownClass" finished-at="2026-04-10T11:38:01 IST" duration-ms="258" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDownClass -->
-      </class> <!-- runners.ProductSearchTestRunner -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
-</testng-results>
->>>>>>> 022f87bb3fe41ab9d65ec9bea5459a0309778409
