@@ -20,7 +20,7 @@ jobs:
       
       # Step 2: Install Java (your tests need Java)
       - name: Set up Java
-        uses: actions/setup-java@v3
+        uses: actions/upload-artifact@v4
         with:
           java-version: '11'
           distribution: 'temurin'
