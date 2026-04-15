@@ -16,7 +16,7 @@ jobs:
     steps:
       # Step 1: Download your code from GitHub
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
       
       # Step 2: Install Java (your tests need Java)
       - name: Set up Java
@@ -33,7 +33,7 @@ jobs:
       # Step 4: Upload the HTML report so you can see it
       - name: Upload Extent Report
         if: always()
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: test-reports
           path: |
