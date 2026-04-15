@@ -35,9 +35,10 @@ jobs:
         with:
           name: test-reports
           path: |
-            reports/extent-reports/
-            test-output/
-            target/surefire-reports/
+           reports/extent-reports/
+           reports/screenshots/
+           test-output/
+           target/surefire-reports/
 
       # Step 5: Email report
       - name: Send Email Report
