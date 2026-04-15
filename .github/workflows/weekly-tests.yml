@@ -54,8 +54,8 @@ jobs:
           password: ${{ secrets.EMAIL_PASSWORD }}
           # Email details
           subject: '🤖 Weekly Test Report - ${{ github.run_number }}'
-          to: your-team@company.com
-          from: automation-tester@company.com
+          to: test_email@12taste.com,mskabilan4@gmail.com
+          from: kabilan.mohanraj@12taste.com
           body: |
             Hi Team,
             
