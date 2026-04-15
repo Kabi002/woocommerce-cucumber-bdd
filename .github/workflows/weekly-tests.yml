@@ -1,0 +1,73 @@
+name: Weekly Automation Tests
+
+# When should this run?
+on:
+  # Run every Monday at 9:00 AM IST (3:30 AM UTC)
+  schedule:
+    - cron: '30 3 * * 1'
+  
+  # Also allow manual running (you can click "Run workflow" button)
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    
+    steps:
+      # Step 1: Download your code from GitHub
+      - name: Checkout code
+        uses: actions/checkout@v3
+      
+      # Step 2: Install Java (your tests need Java)
+      - name: Set up Java
+        uses: actions/setup-java@v3
+        with:
+          java-version: '11'
+          distribution: 'temurin'
+      
+      # Step 3: Run your tests using Maven
+      - name: Run Tests
+        run: mvn clean test
+        continue-on-error: true
+      
+      # Step 4: Upload the HTML report so you can see it
+      - name: Upload Extent Report
+        if: always()
+        uses: actions/upload-artifact@v3
+        with:
+          name: test-reports
+          path: |
+            reports/extent-reports/
+            test-output/
+      
+      # Step 5: Send email with report
+      - name: Send Email Report
+        if: always()
+        uses: dawidd6/action-send-mail@v3
+        with:
+          # SMTP server details (Gmail example)
+          server_address: smtp.gmail.com
+          server_port: 465
+          secure: true
+          # Email credentials (we'll add these as secrets)
+          username: ${{ secrets.EMAIL_USERNAME }}
+          password: ${{ secrets.EMAIL_PASSWORD }}
+          # Email details
+          subject: '🤖 Weekly Test Report - ${{ github.run_number }}'
+          to: your-team@company.com
+          from: automation-tester@company.com
+          body: |
+            Hi Team,
+            
+            Weekly automation test execution completed!
+            
+            Run Number: ${{ github.run_number }}
+            Run Date: ${{ github.event.repository.updated_at }}
+            
+            Please check the attached HTML report for detailed results.
+            
+            View full results: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+            
+            Thanks,
+            Automation Bot 🤖
+          attachments: reports/extent-reports/ExtentReport.html
