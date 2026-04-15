@@ -26,9 +26,18 @@ public class LoginPage {
         this.wait = new WebDriverWait(driver, Duration.ofSeconds(10));
     }
 
-    // Actions
     public void navigateToLoginPage(String url) {
-        driver.get(url + "/my-account");
+        String loginUrl = url + "/my-account";
+        System.out.println("Navigating to: " + loginUrl);
+
+        driver.get(loginUrl);
+
+        System.out.println("After navigation URL: " + driver.getCurrentUrl());
+        System.out.println("After navigation Title: " + driver.getTitle());
+
+        String source = driver.getPageSource();
+        System.out.println("After navigation Source Snippet:");
+        System.out.println(source.substring(0, Math.min(source.length(), 1000)));
     }
 
     public void enterUsername(String username) {
