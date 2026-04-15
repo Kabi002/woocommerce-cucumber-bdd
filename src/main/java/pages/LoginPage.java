@@ -27,30 +27,11 @@ public class LoginPage {
     }
 
     public void navigateToLoginPage(String url) {
-        String loginUrl = url + "/my-account";
-        System.out.println("Navigating to: " + loginUrl);
-
-        driver.get(loginUrl);
-
-        System.out.println("After navigation URL: " + driver.getCurrentUrl());
-        System.out.println("After navigation Title: " + driver.getTitle());
-
-        String source = driver.getPageSource();
-        System.out.println("After navigation Source Snippet:");
-        System.out.println(source.substring(0, Math.min(source.length(), 1000)));
+        driver.get(url + "/my-account");
     }
 
     public void enterUsername(String username) {
-        System.out.println("===== CI DEBUG START =====");
-        System.out.println("Current URL: " + driver.getCurrentUrl());
-        System.out.println("Page Title: " + driver.getTitle());
-
-        String source = driver.getPageSource();
-        System.out.println("Page Source Snippet:");
-        System.out.println(source.substring(0, Math.min(source.length(), 1000)));
-
-        System.out.println("===== CI DEBUG END =====");
-
+     
         WebElement usernameElement = wait.until(
                 ExpectedConditions.visibilityOfElementLocated(usernameField)
         );
