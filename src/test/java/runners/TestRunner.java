@@ -16,7 +16,7 @@ import io.cucumber.testng.CucumberOptions;
     monochrome = true,                                   // Readable console output
     dryRun = false,                                      // Set true to check mapping without execution
     tags = "@login or @register or @dashboard or "
-    		+ "@accountdetails or @addresses or @productsearch or @cart"   // Run specific scenarios using tags
+    		+ "@accountdetails or @addresses or @productsearch or @cart or @checkout"   // Run specific scenarios using tags
 )
 public class TestRunner extends AbstractTestNGCucumberTests {
     
