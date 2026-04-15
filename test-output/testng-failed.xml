@@ -6,10 +6,32 @@
       <class name="runners.AccountDetailsTestRunner">
         <methods>
           <include name="setUpClass"/>
-          <include name="runScenario" invocation-numbers="5"/>
+          <include name="runScenario" invocation-numbers="0 1"/>
           <include name="tearDownClass"/>
         </methods>
       </class> <!-- runners.AccountDetailsTestRunner -->
     </classes>
   </test> <!-- 4 - Account Details Tests(failed) -->
+  <test thread-count="5" name="6 - Product Search Tests(failed)">
+    <classes>
+      <class name="runners.ProductSearchTestRunner">
+        <methods>
+          <include name="setUpClass"/>
+          <include name="runScenario" invocation-numbers="3"/>
+          <include name="tearDownClass"/>
+        </methods>
+      </class> <!-- runners.ProductSearchTestRunner -->
+    </classes>
+  </test> <!-- 6 - Product Search Tests(failed) -->
+  <test thread-count="5" name="7 - Cart Tests(failed)">
+    <classes>
+      <class name="runners.CartTestRunner">
+        <methods>
+          <include name="setUpClass"/>
+          <include name="tearDownClass"/>
+          <include name="runScenario" invocation-numbers="0 1 2"/>
+        </methods>
+      </class> <!-- runners.CartTestRunner -->
+    </classes>
+  </test> <!-- 7 - Cart Tests(failed) -->
 </suite> <!-- Failed suite [WooCommerce Test Suite] -->

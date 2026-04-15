@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>4 - Account Details Tests</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>6/1/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>5/2/0</td>
 </tr><tr>
-<td>Started on:</td><td>Mon Apr 13 09:56:53 IST 2026</td>
+<td>Started on:</td><td>Wed Apr 15 11:57:34 IST 2026</td>
 </tr>
-<tr><td>Total time:</td><td>264 seconds (264826 ms)</td>
+<tr><td>Total time:</td><td>356 seconds (356064 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -76,32 +76,94 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='runners.AccountDetailsTestRunner.runScenario()'><b>runScenario</b><br>Test class: runners.AccountDetailsTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Save changes with wrong current password shows error", "WooCommerce Account Details Functionality"</td>
-<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: [[ChromeDriver: chrome on windows (4745ae5e59d28b25db6a45839a004d03)] -&gt; css selector: button[name=&apos;save_account_details&apos;]] (tried for 15 second(s) with 500 milliseconds interval)
+<td title='runners.AccountDetailsTestRunner.runScenario()'><b>runScenario</b><br>Test class: runners.AccountDetailsTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Update first name and last name successfully", "WooCommerce Account Details Functionality"</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: timeout: Timed out receiving message from renderer: 3.226
+  (Session info: chrome=147.0.7727.56)
 Build info: version: &apos;4.18.1&apos;, revision: &apos;b1d3319b48&apos;
 System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;23.0.2&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 146.0.7680.178, chrome: {chromedriverVersion: 146.0.7680.165 (4b989da09e1..., userDataDir: C:\Users\Lenovo\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58380}, goog:processID: 7928, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58380/devtoo..., se:cdpVersion: 146.0.7680.178, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 4745ae5e59d28b25db6a45839a004d03
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-	at pages.AccountDetailsPage.clickSaveChanges(AccountDetailsPage.java:140)
-	at stepdefinitions.AccountDetailsSteps.i_click_save_changes_button(AccountDetailsSteps.java:75)
-	at ✽.I click save changes button(file:///C:/Users/Lenovo/woo-project/src/test/resources/features/AccountDetails.feature:51)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1730344986", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1730344986'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: [[ChromeDriver: chrome on windows (4745ae5e59d28b25db6a45839a004d03)] -&gt; css selector: button[name=&apos;save_account_details&apos;]] (tried for 15 second(s) with 500 milliseconds interval)
+Command: [468a3817aad3168cab4ebf866f09b611, get {url=https://www.12taste.com}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.56, chrome: {chromedriverVersion: 147.0.7727.56 (b28eac7a1a97..., userDataDir: C:\Users\Lenovo\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54447}, goog:processID: 27840, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54447/devtoo..., se:cdpVersion: 147.0.7727.56, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 468a3817aad3168cab4ebf866f09b611
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:301)
+	at hooks.Hooks.setUp(Hooks.java:20)
+... Removed 3 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2065936034", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2065936034'><pre>org.openqa.selenium.TimeoutException: timeout: Timed out receiving message from renderer: 3.226
+  (Session info: chrome=147.0.7727.56)
 Build info: version: &apos;4.18.1&apos;, revision: &apos;b1d3319b48&apos;
 System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;23.0.2&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 146.0.7680.178, chrome: {chromedriverVersion: 146.0.7680.165 (4b989da09e1..., userDataDir: C:\Users\Lenovo\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58380}, goog:processID: 7928, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58380/devtoo..., se:cdpVersion: 146.0.7680.178, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 4745ae5e59d28b25db6a45839a004d03
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-	at pages.AccountDetailsPage.clickSaveChanges(AccountDetailsPage.java:140)
-	at stepdefinitions.AccountDetailsSteps.i_click_save_changes_button(AccountDetailsSteps.java:75)
-	at ✽.I click save changes button(file:///C:/Users/Lenovo/woo-project/src/test/resources/features/AccountDetails.feature:51)
+Command: [468a3817aad3168cab4ebf866f09b611, get {url=https://www.12taste.com}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.56, chrome: {chromedriverVersion: 147.0.7727.56 (b28eac7a1a97..., userDataDir: C:\Users\Lenovo\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54447}, goog:processID: 27840, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54447/devtoo..., se:cdpVersion: 147.0.7727.56, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 468a3817aad3168cab4ebf866f09b611
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:501)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:485)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:301)
+	at hooks.Hooks.setUp(Hooks.java:20)
 </pre></div></td>
-<td>49</td>
+<td>90</td>
+<td>runners.AccountDetailsTestRunner@62230c58</td></tr>
+<tr>
+<td title='runners.AccountDetailsTestRunner.runScenario()'><b>runScenario</b><br>Test class: runners.AccountDetailsTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify account details page loads with all fields", "WooCommerce Account Details Functionality"</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: timeout: Timed out receiving message from renderer: 29.688
+  (Session info: chrome=147.0.7727.56)
+Build info: version: &apos;4.18.1&apos;, revision: &apos;b1d3319b48&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;23.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [ab81e488a1bac11550c8ed11aa51dbbd, get {url=https://www.12taste.com/my-account}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.56, chrome: {chromedriverVersion: 147.0.7727.56 (b28eac7a1a97..., userDataDir: C:\Users\Lenovo\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59536}, goog:processID: 20392, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59536/devtoo..., se:cdpVersion: 147.0.7727.56, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: ab81e488a1bac11550c8ed11aa51dbbd
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:301)
+	at pages.LoginPage.navigateToLoginPage(LoginPage.java:31)
+	at stepdefinitions.LoginSteps.i_navigate_to_the_login_page(LoginSteps.java:25)
+	at ✽.I navigate to the login page(file:///C:/Users/Lenovo/woo-project/src/test/resources/features/AccountDetails.feature:5)
+... Removed 3 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace929847632", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace929847632'><pre>org.openqa.selenium.TimeoutException: timeout: Timed out receiving message from renderer: 29.688
+  (Session info: chrome=147.0.7727.56)
+Build info: version: &apos;4.18.1&apos;, revision: &apos;b1d3319b48&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;23.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [ab81e488a1bac11550c8ed11aa51dbbd, get {url=https://www.12taste.com/my-account}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.56, chrome: {chromedriverVersion: 147.0.7727.56 (b28eac7a1a97..., userDataDir: C:\Users\Lenovo\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59536}, goog:processID: 20392, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59536/devtoo..., se:cdpVersion: 147.0.7727.56, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: ab81e488a1bac11550c8ed11aa51dbbd
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:501)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:485)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:301)
+	at pages.LoginPage.navigateToLoginPage(LoginPage.java:31)
+	at stepdefinitions.LoginSteps.i_navigate_to_the_login_page(LoginSteps.java:25)
+	at ✽.I navigate to the login page(file:///C:/Users/Lenovo/woo-project/src/test/resources/features/AccountDetails.feature:5)
+</pre></div></td>
+<td>59</td>
 <td>runners.AccountDetailsTestRunner@62230c58</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-passed'>
@@ -113,34 +175,29 @@ Session ID: 4745ae5e59d28b25db6a45839a004d03
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='runners.AccountDetailsTestRunner.runScenario()'><b>runScenario</b><br>Test class: runners.AccountDetailsTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Update first name and last name successfully", "WooCommerce Account Details Functionality"</td>
+<td title='runners.AccountDetailsTestRunner.runScenario()'><b>runScenario</b><br>Test class: runners.AccountDetailsTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Save changes without password fields should succeed", "WooCommerce Account Details Functionality"</td>
 <td></td>
-<td>37</td>
+<td>40</td>
 <td>runners.AccountDetailsTestRunner@62230c58</td></tr>
 <tr>
 <td title='runners.AccountDetailsTestRunner.runScenario()'><b>runScenario</b><br>Test class: runners.AccountDetailsTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Leave first name empty shows validation error", "WooCommerce Account Details Functionality"</td>
 <td></td>
-<td>35</td>
+<td>37</td>
 <td>runners.AccountDetailsTestRunner@62230c58</td></tr>
 <tr>
 <td title='runners.AccountDetailsTestRunner.runScenario()'><b>runScenario</b><br>Test class: runners.AccountDetailsTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Update display name successfully", "WooCommerce Account Details Functionality"</td>
 <td></td>
-<td>37</td>
+<td>48</td>
+<td>runners.AccountDetailsTestRunner@62230c58</td></tr>
+<tr>
+<td title='runners.AccountDetailsTestRunner.runScenario()'><b>runScenario</b><br>Test class: runners.AccountDetailsTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Save changes with wrong current password shows error", "WooCommerce Account Details Functionality"</td>
+<td></td>
+<td>38</td>
 <td>runners.AccountDetailsTestRunner@62230c58</td></tr>
 <tr>
 <td title='runners.AccountDetailsTestRunner.runScenario()'><b>runScenario</b><br>Test class: runners.AccountDetailsTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Update email with invalid format shows validation error", "WooCommerce Account Details Functionality"</td>
 <td></td>
-<td>34</td>
-<td>runners.AccountDetailsTestRunner@62230c58</td></tr>
-<tr>
-<td title='runners.AccountDetailsTestRunner.runScenario()'><b>runScenario</b><br>Test class: runners.AccountDetailsTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify account details page loads with all fields", "WooCommerce Account Details Functionality"</td>
-<td></td>
-<td>34</td>
-<td>runners.AccountDetailsTestRunner@62230c58</td></tr>
-<tr>
-<td title='runners.AccountDetailsTestRunner.runScenario()'><b>runScenario</b><br>Test class: runners.AccountDetailsTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Save changes without password fields should succeed", "WooCommerce Account Details Functionality"</td>
-<td></td>
-<td>36</td>
+<td>40</td>
 <td>runners.AccountDetailsTestRunner@62230c58</td></tr>
 </table><p>
 </body>

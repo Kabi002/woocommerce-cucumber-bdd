@@ -44,4 +44,10 @@
     </classes>
 </test>
 
+<test name="8 - Checkout Tests">
+    <classes>
+        <class name="runners.CheckoutTestRunner"/>
+    </classes>
+</test>
+
 </suite>
