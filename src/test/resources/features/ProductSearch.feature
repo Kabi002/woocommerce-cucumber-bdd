@@ -24,7 +24,6 @@ Feature: WooCommerce Product Search and Add to Cart
     Then I should be on product page "test-product-1"
     And I should see product title "Test Product 1"
 
-@sanity
   Scenario: Add product to cart successfully
     When I navigate directly to product page
     And I select packaging option "1 LITRE CAN"

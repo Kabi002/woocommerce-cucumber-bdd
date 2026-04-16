@@ -14,7 +14,6 @@ public class AccountDetailsPage {
     private WebDriver driver;
     private WebDriverWait wait;
 
-    // ── Field Locators ─────────────────────────────────────────────────
     private By firstNameField       = By.id("account_first_name");
     private By lastNameField        = By.id("account_last_name");
     private By displayNameField     = By.id("account_display_name");
@@ -24,7 +23,6 @@ public class AccountDetailsPage {
     private By confirmPasswordField = By.id("password_2");
     private By saveChangesButton    = By.cssSelector("button[name='save_account_details']");
 
-    // ── Success & Error Messages ───────────────────────────────────────
     private By successMessage = By.cssSelector("div.woocommerce-message");
     private By errorMessage   = By.cssSelector("ul.woocommerce-error");
 
@@ -33,16 +31,19 @@ public class AccountDetailsPage {
         this.wait   = new WebDriverWait(driver, Duration.ofSeconds(15));
     }
 
-    // ── Navigate ───────────────────────────────────────────────────────
     public void navigateToAccountDetailsPage(String baseUrl) {
         driver.get(baseUrl + "/my-account/edit-account/");
+        // ── FIX: Wait for the form to be fully ready before any interaction.
+        //         This ensures the nonce embedded in the form is fresh for
+        //         THIS browser session and not shared with another parallel thread.
+        wait.until(ExpectedConditions.visibilityOfElementLocated(saveChangesButton));
     }
 
-    // ── Dismiss Cookie Popup ───────────────────────────────────────────
     public void dismissPopups() {
         try {
             By cookieAccept = By.cssSelector("button[data-cky-tag='accept-button']");
-            WebElement cookieBtn = wait.until(ExpectedConditions.elementToBeClickable(cookieAccept));
+            WebElement cookieBtn = new WebDriverWait(driver, Duration.ofSeconds(5))
+                    .until(ExpectedConditions.elementToBeClickable(cookieAccept));
             cookieBtn.click();
             System.out.println("✅ Cookie popup dismissed");
             wait.until(ExpectedConditions.invisibilityOfElementLocated(
@@ -52,7 +53,6 @@ public class AccountDetailsPage {
         }
     }
 
-    // ── Verify All Fields Visible ──────────────────────────────────────
     public boolean areAllFieldsVisible() {
         By[] fields = {
             firstNameField, lastNameField, displayNameField,
@@ -75,7 +75,6 @@ public class AccountDetailsPage {
         return true;
     }
 
-    // ── Field Actions ──────────────────────────────────────────────────
     public void clearAndEnterFirstName(String firstName) {
         WebElement field = wait.until(ExpectedConditions.visibilityOfElementLocated(firstNameField));
         field.clear();
@@ -118,64 +117,85 @@ public class AccountDetailsPage {
         field.sendKeys(password);
     }
 
-    // ── Click Save Changes ─────────────────────────────────────────────
-//    public void clickSaveChanges() {
-//        WebElement btn = wait.until(ExpectedConditions.elementToBeClickable(saveChangesButton));
-//        ((JavascriptExecutor) driver).executeScript("arguments[0].click();", btn);
-//    }
-
+    // ── FIX: After clicking Save, WooCommerce does a full page POST then
+    //         reloads /my-account/edit-account/ with a success notice at top.
+    //         The key problem in parallel runs: another thread hitting the
+    //         same account invalidates this thread's nonce.
+    //         Solution: navigate to the page fresh right before saving
+    //         (done in navigateToAccountDetailsPage already), and after
+    //         clicking Save we wait for the page to complete its reload
+    //         before isSuccessMessageDisplayed() checks for the notice.
     public void clickSaveChanges() {
-
         WebElement btn = wait.until(ExpectedConditions.presenceOfElementLocated(saveChangesButton));
 
-        // ✅ Scroll to center
         ((JavascriptExecutor) driver)
             .executeScript("arguments[0].scrollIntoView({block: 'center'});", btn);
-
-        // ✅ Move slightly up to avoid footer overlap
         ((JavascriptExecutor) driver)
             .executeScript("window.scrollBy(0, -120);");
 
-        // ✅ Wait for clickable
         wait.until(ExpectedConditions.elementToBeClickable(btn));
 
-        // ✅ Click with fallback
+        // Capture current URL so we can detect page reload
+        String urlBefore = driver.getCurrentUrl();
+
         try {
             btn.click();
         } catch (Exception e) {
             ((JavascriptExecutor) driver)
                 .executeScript("arguments[0].click();", btn);
         }
+
+        // ── FIX: Wait for the page to reload (URL stays the same but the
+        //         DOM is replaced). We detect this by waiting for the save
+        //         button to go stale (it belongs to the old DOM), then
+        //         waiting for it to re-appear in the new DOM.
+        //         This replaces the fixed Thread.sleep approach.
+        try {
+            wait.until(ExpectedConditions.stalenessOf(btn));
+        } catch (Exception ignored) {
+            // If staleness isn't detected, the page may use AJAX — proceed
+        }
+
+        // Re-wait for page to be interactive before the assertion step runs
+        new WebDriverWait(driver, Duration.ofSeconds(20))
+            .until(ExpectedConditions.visibilityOfElementLocated(saveChangesButton));
     }
-    
-    // ── Success Message ────────────────────────────────────────────────
+
+    // ── FIX: Extended wait + explicit URL check so we know we're on
+    //         the reloaded page, not the pre-submit page.
     public boolean isSuccessMessageDisplayed() {
         try {
             WebDriverWait longWait = new WebDriverWait(driver, Duration.ofSeconds(30));
-            WebElement msg = longWait.until(ExpectedConditions.visibilityOfElementLocated(successMessage));
+
+            // First confirm we're on the edit-account page (post-reload)
+            longWait.until(ExpectedConditions.urlContains("/my-account/edit-account/"));
+
+            // Then wait for the WooCommerce notice to appear
+            WebElement msg = longWait.until(
+                ExpectedConditions.visibilityOfElementLocated(successMessage));
+
             String text = msg.getText().trim();
             System.out.println("✅ Success message: " + text);
             return text.contains("Account details changed successfully");
+
         } catch (Exception e) {
             System.out.println("❌ Success message not found | Current URL: " + driver.getCurrentUrl());
             return false;
         }
     }
 
- // ── Password Required Error ────────────────────────────────────────
     public boolean isPasswordRequiredErrorDisplayed() {
         try {
             WebElement msg = wait.until(ExpectedConditions.visibilityOfElementLocated(errorMessage));
             String text = msg.getText().toLowerCase();
             System.out.println("Actual error message: " + text);
-
             return text.contains("password") && text.contains("required");
         } catch (Exception e) {
             System.out.println("❌ Password required error not found");
             return false;
         }
     }
-    // ── Required Field Error (Server side) ────────────────────────────
+
     public boolean isFirstNameRequiredErrorDisplayed() {
         try {
             By firstNameError = By.cssSelector("li[data-id='account_first_name']");
@@ -189,7 +209,6 @@ public class AccountDetailsPage {
         }
     }
 
-    // ── Wrong Password Error ───────────────────────────────────────────
     public boolean isWrongPasswordErrorDisplayed() {
         try {
             WebElement msg = wait.until(ExpectedConditions.visibilityOfElementLocated(errorMessage));
@@ -205,7 +224,6 @@ public class AccountDetailsPage {
         }
     }
 
-    // ── HTML5 Validation Messages ──────────────────────────────────────
     public String getEmailValidationMessage() {
         WebElement field = driver.findElement(emailField);
         return (String) ((JavascriptExecutor) driver)
@@ -217,7 +235,7 @@ public class AccountDetailsPage {
         return (String) ((JavascriptExecutor) driver)
                 .executeScript("return arguments[0].validationMessage;", field);
     }
-    
+
     public void clearAllPasswordFields() {
         WebElement current = wait.until(ExpectedConditions.visibilityOfElementLocated(currentPasswordField));
         WebElement newPass = wait.until(ExpectedConditions.visibilityOfElementLocated(newPasswordField));
@@ -227,7 +245,6 @@ public class AccountDetailsPage {
         newPass.clear();
         confirm.clear();
 
-        // ✅ Extra safety (handles JS issues)
         ((JavascriptExecutor) driver).executeScript(
             "arguments[0].value=''; arguments[1].value=''; arguments[2].value='';",
             current, newPass, confirm

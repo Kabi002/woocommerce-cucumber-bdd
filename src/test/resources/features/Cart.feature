@@ -3,8 +3,8 @@ Feature: WooCommerce Cart Functionality
 
   Background:
     Given I navigate to the login page
-    When I enter username "test_email@12taste.com"
-    And I enter password "test_email@12taste.com"
+    When I enter username "mskabilan4@gmail.com"
+    And I enter password "mskabilan4@gmail.com"
     And I click on the login button
     Then I should be logged in successfully
     And I navigate directly to product and add to cart

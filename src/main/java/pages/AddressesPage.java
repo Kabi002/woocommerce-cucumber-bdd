@@ -156,15 +156,67 @@ public class AddressesPage {
 
     // ── Click Edit Links ───────────────────────────────────────────────
     public void clickEditBillingAddress() {
-        wait.until(ExpectedConditions.elementToBeClickable(editBillingLink)).click();
-        wait.until(ExpectedConditions.urlContains("/edit-address/billing/"));
-        System.out.println("✅ Navigated to billing address page");
+        try {
+            dismissPopups();
+
+            WebElement billingLink = wait.until(
+                    ExpectedConditions.visibilityOfElementLocated(editBillingLink)
+            );
+
+            ((JavascriptExecutor) driver).executeScript(
+                    "arguments[0].scrollIntoView({block:'center'});",
+                    billingLink
+            );
+
+            Thread.sleep(500);
+
+            try {
+                billingLink.click();
+            } catch (Exception e) {
+                ((JavascriptExecutor) driver).executeScript(
+                        "arguments[0].click();",
+                        billingLink
+                );
+            }
+
+            wait.until(ExpectedConditions.urlContains("/edit-address/billing/"));
+            System.out.println("✅ Navigated to billing address page");
+
+        } catch (Exception e) {
+            throw new RuntimeException("Unable to click Billing Address Edit Link", e);
+        }
     }
 
     public void clickEditShippingAddress() {
-        wait.until(ExpectedConditions.elementToBeClickable(editShippingLink)).click();
-        wait.until(ExpectedConditions.urlContains("/edit-address/shipping/"));
-        System.out.println("✅ Navigated to shipping address page");
+        try {
+            dismissPopups();
+
+            WebElement shippingLink = wait.until(
+                    ExpectedConditions.visibilityOfElementLocated(editShippingLink)
+            );
+
+            ((JavascriptExecutor) driver).executeScript(
+                    "arguments[0].scrollIntoView({block:'center'});",
+                    shippingLink
+            );
+
+            Thread.sleep(500);
+
+            try {
+                shippingLink.click();
+            } catch (Exception e) {
+                ((JavascriptExecutor) driver).executeScript(
+                        "arguments[0].click();",
+                        shippingLink
+                );
+            }
+
+            wait.until(ExpectedConditions.urlContains("/edit-address/shipping/"));
+            System.out.println("✅ Navigated to shipping address page");
+
+        } catch (Exception e) {
+            throw new RuntimeException("Unable to click Shipping Address Edit Link", e);
+        }
     }
 
     // ── URL Verification ──────────────────────────────────────────────
