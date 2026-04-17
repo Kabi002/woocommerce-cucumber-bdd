@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>4 - Account Details Tests</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>7/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>6/1/1</td>
 </tr><tr>
-<td>Started on:</td><td>Thu Apr 16 18:23:16 IST 2026</td>
+<td>Started on:</td><td>Fri Apr 17 10:18:46 IST 2026</td>
 </tr>
-<tr><td>Total time:</td><td>345 seconds (345800 ms)</td>
+<tr><td>Total time:</td><td>337 seconds (337757 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,6 +67,43 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='runners.AccountDetailsTestRunner.runScenario()'><b>runScenario</b><br>Test class: runners.AccountDetailsTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Save changes with wrong current password shows error", "WooCommerce Account Details Functionality"</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: [[ChromeDriver: chrome on windows (9da210eaf603feebdb92f65cab486225)] -&gt; css selector: button[name=&apos;save_account_details&apos;]] (tried for 15 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.18.1&apos;, revision: &apos;b1d3319b48&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.30&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.57, chrome: {chromedriverVersion: 147.0.7727.57 (b4f28b5637d0..., userDataDir: C:\Users\Lenovo\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58623}, goog:processID: 20920, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58623/devtoo..., se:cdpVersion: 147.0.7727.57, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 9da210eaf603feebdb92f65cab486225
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at pages.AccountDetailsPage.clickSaveChanges(AccountDetailsPage.java:136)
+	at stepdefinitions.AccountDetailsSteps.i_click_save_changes_button(AccountDetailsSteps.java:75)
+	at ✽.I click save changes button(file:///C:/Users/Lenovo/woo-project/src/test/resources/features/AccountDetails.feature:51)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1418674632", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1418674632'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: [[ChromeDriver: chrome on windows (9da210eaf603feebdb92f65cab486225)] -&gt; css selector: button[name=&apos;save_account_details&apos;]] (tried for 15 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.18.1&apos;, revision: &apos;b1d3319b48&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.30&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.57, chrome: {chromedriverVersion: 147.0.7727.57 (b4f28b5637d0..., userDataDir: C:\Users\Lenovo\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58623}, goog:processID: 20920, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58623/devtoo..., se:cdpVersion: 147.0.7727.57, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 9da210eaf603feebdb92f65cab486225
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at pages.AccountDetailsPage.clickSaveChanges(AccountDetailsPage.java:136)
+	at stepdefinitions.AccountDetailsSteps.i_click_save_changes_button(AccountDetailsSteps.java:75)
+	at ✽.I click save changes button(file:///C:/Users/Lenovo/woo-project/src/test/resources/features/AccountDetails.feature:51)
+</pre></div></td>
+<td>49</td>
+<td>runners.AccountDetailsTestRunner@7098b907</td></tr>
+</table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
@@ -76,39 +113,71 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='runners.AccountDetailsTestRunner.runScenario()'><b>runScenario</b><br>Test class: runners.AccountDetailsTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Update first name and last name successfully", "WooCommerce Account Details Functionality"</td>
-<td></td>
-<td>50</td>
-<td>runners.AccountDetailsTestRunner@7098b907</td></tr>
-<tr>
 <td title='runners.AccountDetailsTestRunner.runScenario()'><b>runScenario</b><br>Test class: runners.AccountDetailsTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Leave first name empty shows validation error", "WooCommerce Account Details Functionality"</td>
 <td></td>
-<td>48</td>
-<td>runners.AccountDetailsTestRunner@7098b907</td></tr>
-<tr>
-<td title='runners.AccountDetailsTestRunner.runScenario()'><b>runScenario</b><br>Test class: runners.AccountDetailsTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify account details page loads with all fields", "WooCommerce Account Details Functionality"</td>
-<td></td>
-<td>43</td>
-<td>runners.AccountDetailsTestRunner@7098b907</td></tr>
-<tr>
-<td title='runners.AccountDetailsTestRunner.runScenario()'><b>runScenario</b><br>Test class: runners.AccountDetailsTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Save changes without password fields should succeed", "WooCommerce Account Details Functionality"</td>
-<td></td>
-<td>47</td>
-<td>runners.AccountDetailsTestRunner@7098b907</td></tr>
-<tr>
-<td title='runners.AccountDetailsTestRunner.runScenario()'><b>runScenario</b><br>Test class: runners.AccountDetailsTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Update display name successfully", "WooCommerce Account Details Functionality"</td>
-<td></td>
-<td>48</td>
+<td>36</td>
 <td>runners.AccountDetailsTestRunner@7098b907</td></tr>
 <tr>
 <td title='runners.AccountDetailsTestRunner.runScenario()'><b>runScenario</b><br>Test class: runners.AccountDetailsTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Update email with invalid format shows validation error", "WooCommerce Account Details Functionality"</td>
 <td></td>
-<td>60</td>
+<td>50</td>
 <td>runners.AccountDetailsTestRunner@7098b907</td></tr>
 <tr>
-<td title='runners.AccountDetailsTestRunner.runScenario()'><b>runScenario</b><br>Test class: runners.AccountDetailsTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Save changes with wrong current password shows error", "WooCommerce Account Details Functionality"</td>
+<td title='runners.AccountDetailsTestRunner.runScenario()'><b>runScenario</b><br>Test class: runners.AccountDetailsTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Update display name successfully", "WooCommerce Account Details Functionality"</td>
 <td></td>
-<td>47</td>
+<td>38</td>
+<td>runners.AccountDetailsTestRunner@7098b907</td></tr>
+<tr>
+<td title='runners.AccountDetailsTestRunner.runScenario()'><b>runScenario</b><br>Test class: runners.AccountDetailsTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify account details page loads with all fields", "WooCommerce Account Details Functionality"</td>
+<td></td>
+<td>34</td>
+<td>runners.AccountDetailsTestRunner@7098b907</td></tr>
+<tr>
+<td title='runners.AccountDetailsTestRunner.runScenario()'><b>runScenario</b><br>Test class: runners.AccountDetailsTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Save changes without password fields should succeed", "WooCommerce Account Details Functionality"</td>
+<td></td>
+<td>38</td>
+<td>runners.AccountDetailsTestRunner@7098b907</td></tr>
+<tr>
+<td title='runners.AccountDetailsTestRunner.runScenario()'><b>runScenario</b><br>Test class: runners.AccountDetailsTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Update first name and last name successfully", "WooCommerce Account Details Functionality"</td>
+<td></td>
+<td>39</td>
+<td>runners.AccountDetailsTestRunner@7098b907</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-skipped'>
+<tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='runners.AccountDetailsTestRunner.runScenario()'><b>runScenario</b><br>Test class: runners.AccountDetailsTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Save changes with wrong current password shows error", "WooCommerce Account Details Functionality"</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: [[ChromeDriver: chrome on windows (72f402e9116cf31ed56fee5d6734617b)] -&gt; css selector: button[name=&apos;save_account_details&apos;]] (tried for 15 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.18.1&apos;, revision: &apos;b1d3319b48&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.30&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.57, chrome: {chromedriverVersion: 147.0.7727.57 (b4f28b5637d0..., userDataDir: C:\Users\Lenovo\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49819}, goog:processID: 6032, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:49819/devtoo..., se:cdpVersion: 147.0.7727.57, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 72f402e9116cf31ed56fee5d6734617b
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at pages.AccountDetailsPage.clickSaveChanges(AccountDetailsPage.java:136)
+	at stepdefinitions.AccountDetailsSteps.i_click_save_changes_button(AccountDetailsSteps.java:75)
+	at ✽.I click save changes button(file:///C:/Users/Lenovo/woo-project/src/test/resources/features/AccountDetails.feature:51)
+</pre></div><a href='#' onClick='toggleBox("stack-trace753951823", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace753951823'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: [[ChromeDriver: chrome on windows (72f402e9116cf31ed56fee5d6734617b)] -&gt; css selector: button[name=&apos;save_account_details&apos;]] (tried for 15 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.18.1&apos;, revision: &apos;b1d3319b48&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.30&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.57, chrome: {chromedriverVersion: 147.0.7727.57 (b4f28b5637d0..., userDataDir: C:\Users\Lenovo\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49819}, goog:processID: 6032, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:49819/devtoo..., se:cdpVersion: 147.0.7727.57, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 72f402e9116cf31ed56fee5d6734617b
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at pages.AccountDetailsPage.clickSaveChanges(AccountDetailsPage.java:136)
+	at stepdefinitions.AccountDetailsSteps.i_click_save_changes_button(AccountDetailsSteps.java:75)
+	at ✽.I click save changes button(file:///C:/Users/Lenovo/woo-project/src/test/resources/features/AccountDetails.feature:51)
+</pre></div></td>
+<td>49</td>
 <td>runners.AccountDetailsTestRunner@7098b907</td></tr>
 </table><p>
 </body>

@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>8 - Checkout Tests</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>3/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>3/0/1</td>
 </tr><tr>
-<td>Started on:</td><td>Thu Apr 16 16:40:42 IST 2026</td>
+<td>Started on:</td><td>Fri Apr 17 10:29:41 IST 2026</td>
 </tr>
-<tr><td>Total time:</td><td>365 seconds (365154 ms)</td>
+<tr><td>Total time:</td><td>432 seconds (432573 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -76,20 +76,44 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='runners.CheckoutTestRunner.runScenario()'><b>runScenario</b><br>Test class: runners.CheckoutTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify billing details page loads with pre-filled details", "WooCommerce Checkout Functionality"</td>
-<td></td>
-<td>84</td>
-<td>runners.CheckoutTestRunner@24105dc5</td></tr>
-<tr>
 <td title='runners.CheckoutTestRunner.runScenario()'><b>runScenario</b><br>Test class: runners.CheckoutTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Complete full checkout process and place order", "WooCommerce Checkout Functionality"</td>
 <td></td>
-<td>178</td>
-<td>runners.CheckoutTestRunner@24105dc5</td></tr>
+<td>144</td>
+<td>runners.CheckoutTestRunner@2438dcd</td></tr>
 <tr>
 <td title='runners.CheckoutTestRunner.runScenario()'><b>runScenario</b><br>Test class: runners.CheckoutTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify order summary on billing page", "WooCommerce Checkout Functionality"</td>
 <td></td>
-<td>102</td>
-<td>runners.CheckoutTestRunner@24105dc5</td></tr>
+<td>50</td>
+<td>runners.CheckoutTestRunner@2438dcd</td></tr>
+<tr>
+<td title='runners.CheckoutTestRunner.runScenario()'><b>runScenario</b><br>Test class: runners.CheckoutTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify billing details page loads with pre-filled details", "WooCommerce Checkout Functionality"</td>
+<td></td>
+<td>50</td>
+<td>runners.CheckoutTestRunner@2438dcd</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-skipped'>
+<tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='runners.CheckoutTestRunner.runScenario()'><b>runScenario</b><br>Test class: runners.CheckoutTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Complete full checkout process and place order", "WooCommerce Checkout Functionality"</td>
+<td><div><pre>java.lang.AssertionError: Order confirmation message is not visible! expected [true] but found [false]
+	at stepdefinitions.CheckoutSteps.i_should_see_order_confirmation_message(CheckoutSteps.java:118)
+	at ✽.I should see order confirmation message(file:///C:/Users/Lenovo/woo-project/src/test/resources/features/Checkout.feature:34)
+... Removed 3 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1155607209", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1155607209'><pre>java.lang.AssertionError: Order confirmation message is not visible! expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertTrue(Assert.java:57)
+	at stepdefinitions.CheckoutSteps.i_should_see_order_confirmation_message(CheckoutSteps.java:118)
+	at ✽.I should see order confirmation message(file:///C:/Users/Lenovo/woo-project/src/test/resources/features/Checkout.feature:34)
+</pre></div></td>
+<td>186</td>
+<td>runners.CheckoutTestRunner@2438dcd</td></tr>
 </table><p>
 </body>
 </html>
